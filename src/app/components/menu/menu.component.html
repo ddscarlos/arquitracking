@@ -1,0 +1,130 @@
+<div class="app-sidebar sidebar-shadow">
+  <div class="app-header__logo">
+      <div class="logo-src"></div>
+      <div class="header__pane ml-auto">
+          <div>
+              <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                  <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                  </span>
+              </button>
+          </div>
+      </div>
+  </div>
+  <div class="app-header__mobile-menu">
+      <div>
+          <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+              <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+              </span>
+          </button>
+      </div>
+  </div>
+  <div class="app-header__menu">
+      <span>
+          <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+              <span class="btn-icon-wrapper">
+                  <i class="fa fa-ellipsis-v fa-w-6"></i>
+              </span>
+      </button>
+      </span>
+  </div>
+  <div class="scrollbar-sidebar">
+      <div class="app-sidebar__inner">
+          <ul class="vertical-nav-menu">
+              <li class="app-sidebar__heading">Menu</li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Empresa
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/empresa/consulta-empresa'><i class="metismenu-icon"></i>Consulta Empresa</a></li>
+                      <li><a routerLink='/empresa/mantenimiento'><i class="metismenu-icon"></i>Mantenimiento</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Seguimiento
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/seguimiento/registrar-datos'><i class="metismenu-icon"></i>Registrar Datos</a></li>
+                      <li><a routerLink='/seguimiento/registro-incompleto'><i class="metismenu-icon"></i>Registrar Incompletos</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Administrador
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/administrador/panel'><i class="metismenu-icon"></i>Dashboard</a></li>
+                      <li><a routerLink='/administrador/actividades-diarias'><i class="metismenu-icon"></i>Actividades Diarias</a></li>
+                      <li><a routerLink='/administrador/actividades-semanales'><i class="metismenu-icon"></i>Actividades Semanales</a></li>
+                      <li><a routerLink='/administrador/actividades-mensuales'><i class="metismenu-icon"></i>Actividades Mensuales</a></li>
+                      <li><a routerLink='/administrador/notificaciones'><i class="metismenu-icon"></i>Notificaciones</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Proceso de Contacto
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/proceso/inicio'><i class="metismenu-icon"></i>Iniciar Contacto</a></li>
+                      <li><a routerLink='/proceso/estados'><i class="metismenu-icon"></i>Estados</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Actividades
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/actividades/actividades'><i class="metismenu-icon"></i>Ver actividades (SCRUM)</a></li>
+                      <li><a routerLink='/actividades/notificaciones'><i class="metismenu-icon"></i>Notificaciones</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Historial
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/historial/historial'><i class="metismenu-icon"></i>Historial de Proceso</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Calendario
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/calendario/eventos'><i class="metismenu-icon"></i>Visualizar eventos</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Usuarios
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/usuarios/perfiles'><i class="metismenu-icon"></i>Perfiles</a></li>
+                      <li><a routerLink='/usuarios/accesos'><i class="metismenu-icon"></i>Accesos</a></li>
+                      <li><a routerLink='/usuarios/usuarios'><i class="metismenu-icon"></i>Usuarios</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">
+                      <i class="metismenu-icon pe-7s-browser"></i> Mantenimiento
+                      <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  </a>
+                  <ul>
+                      <li><a routerLink='/mantenimiento/general'><i class="metismenu-icon"></i>Mantenimiento General</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
