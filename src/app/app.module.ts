@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';  // Importa RouterModule para en
 import { appRoutes } from './app.routes';  // Importa las rutas definidas en app.routes.ts
 import { MenuComponent } from './components/menu/menu.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

@@ -17,7 +17,7 @@
       <div class="main-card mb-1 card">
           <div class="card-body" id="searchform">
               <div>
-                  <form class="d-flex flex-wrap align-items-center">
+                  <div class="d-flex flex-wrap align-items-center">
                       <div class="form-group mr-3">
                           <label for="ruc" class="mr-2">RUC</label>
                           <input name="ruc" id="ruc" type="number" class="form-control" style="width: 35vh;">
@@ -27,8 +27,8 @@
                           <input name="razonsocial" id="razonsocial" type="text" class="form-control">
                       </div>
                       <button class="btn btn-primary btnbuscarconsulta" style="top: 6px;"><i class="pe-7s-search"> </i> Buscar</button>
-                      <button class="btn btn-success btnnuevoconsulta" style="top: 6px;"><i class="pe-7s-plus"> </i> Nuevo</button>
-                  </form>
+                      <button class="btn btn-success btnnuevoconsulta" style="top: 6px;" (click)="open(content)"><i class="pe-7s-plus"> </i> Nuevo</button>
+                  </div>
               </div>
           </div>
       </div>
@@ -75,3 +75,17 @@
       </div>
   </div>
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Título del Modal</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
+  </div>
+  <div class="modal-body">
+    Este es el contenido del modal.
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cerrar</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Guardar Cambios</button>
+  </div>
+</ng-template>

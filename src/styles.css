@@ -22,3 +22,14 @@ app-usuarios
 {
   width: 100%;
 }
+
+.modal-backdrop {
+  position: fixed !important;
+  z-index: 1040 !important;
+}
+
+.modal {
+  position: fixed !important;
+  z-index: 1050 !important;
+  display: block !important;
+}
