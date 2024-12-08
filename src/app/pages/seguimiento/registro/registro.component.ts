@@ -10,6 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class RegistroComponent {
   icono:string='lnr-train';
+  coloricono:string='text-primary';
   titulo:string='Mantenimiento de Empresa';
   descripcion:string='Sección para poder editar y dar mantenimiento a las empresas registradas.';
 

@@ -10,7 +10,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class RegistrarIncompletosComponent {
 
-  icono:string='lnr-picture';
+  icono:string='lnr-apartment';
+  coloricono:string='text-primary';
   titulo:string='Registro de Datos Incompletos';
   descripcion:string='Modificación y registro de las empresas con datos incompletos';
 

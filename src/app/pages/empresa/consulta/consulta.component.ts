@@ -10,6 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class ConsultaComponent {
 
   icono:string='lnr-picture';
+  coloricono:string='text-primary';
   titulo:string='Consulta Empresa';
   descripcion:string='Registro inicial de las empresas a contactar';
 
