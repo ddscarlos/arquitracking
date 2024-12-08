@@ -3,7 +3,6 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 //EMPRESA:
 import { ConsultaComponent } from './pages/empresa/consulta/consulta.component';
-import { RegistroComponent as EmpresaRegistroComponent } from './pages/empresa/registro/registro.component';
 import { MantenimientoComponent } from './pages/empresa/mantenimiento/mantenimiento.component';
 //SEGUIMIENTO:
 import { RegistrarIncompletosComponent } from './pages/seguimiento/registrar-incompletos/registrar-incompletos.component';
@@ -40,7 +39,6 @@ export const appRoutes: Routes = [
 
   //EMPRESA:
   { path: 'empresa/consulta-empresa', component: ConsultaComponent },
-  { path: 'empresa/registro-empresa', component: EmpresaRegistroComponent },
   { path: 'empresa/mantenimiento', component: MantenimientoComponent },
   //SEGUIMIENTO:
   { path: 'seguimiento/registrar-datos', component: SeguimientoRegistroComponent },

@@ -1,1 +1,322 @@
-<p>registro works!</p>
+<div class="app-main__outer">
+  <div class="app-main__inner">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
+        <div class="main-card mb-1 card">
+            <div class="card-body">
+              <div class="widget-heading">RUC : </div>
+              <div class="widget-heading">RAZÓN SOCIAL : </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+        <div class="main-card card widget-chart" id="cardcontador">
+            <div class="card-body">
+              <div class="widget-numbers"><span>08:00</span></div>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 colbtniniciar">
+        <button class="btn btn-primary btn-lg w-100 buttoniniciar" style="top: -3px;">
+          <i class="pe-7s-science btn-icon-wrapper"></i> INICIAR
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="main-card mb-1 card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="direcc">DIRECCIÓN</label>
+                          <input name="direcc" id="direcc" type="text" class="form-control-sm form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                          <label for="rubro">RUBRO</label>
+                          <input name="rubro" id="rubro" type="text" class="form-control-sm form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="pagweb">PAG.WEB</label>
+                          <input name="pagweb" id="pagweb" type="text" class="form-control-sm form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="depart">DEPARTAMENTO</label>
+                          <select type="select" id="depart" name="depart" class="custom-select form-control-sm">
+                            <option value="">-- Seleccionar --</option>
+                            <option>Value 1</option>
+                            <option>Value 2</option>
+                            <option>Value 3</option>
+                            <option>Value 4</option>
+                            <option>Value 5</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="depart">PROVINCIA</label>
+                          <select type="select" id="depart" name="depart" class="custom-select form-control-sm">
+                            <option value="">-- Seleccionar --</option>
+                            <option>Value 1</option>
+                            <option>Value 2</option>
+                            <option>Value 3</option>
+                            <option>Value 4</option>
+                            <option>Value 5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="depart">DISTRITO</label>
+                          <select type="select" id="depart" name="depart" class="custom-select form-control-sm">
+                            <option value="">-- Seleccionar --</option>
+                            <option>Value 1</option>
+                            <option>Value 2</option>
+                            <option>Value 3</option>
+                            <option>Value 4</option>
+                            <option>Value 5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row pt-2 pb-2">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5 class="card-title">REPRESENTANTE(S) LEGAL(ES)</h5>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="tdodoc">TIPO DOCUMENTO:</label>
+                            <select type="select" id="tdodoc" name="tdodoc" class="custom-select form-control-sm">
+                              <option value="">-- Seleccionar --</option>
+                              <option>Value 1</option>
+                              <option>Value 2</option>
+                              <option>Value 3</option>
+                              <option>Value 4</option>
+                              <option>Value 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="nrodoc">NÚMERO DE DOCUMENTO:</label>
+                          <input name="nrodoc" id="nrodoc" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-12 pb-3">
+                          <label for="nombres">NOMBRES:</label>
+                          <input name="nombres" id="nombres" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="apepat">AP.PATERNO:</label>
+                          <input name="apepat" id="apepat" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="apemat">AP.MATERNO:</label>
+                          <input name="apemat" id="apemat" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-12 pt-3">
+                          <button class="btn-icon btn btn-primary btn-block"><i class="pe-7s-users btn-icon-wrapper"> </i>AGREGAR REPRESENTANTE</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="main-card mb-1 card" style="height: 100%;">
+                          <div class="card-body">
+                              <table class="mb-0 table table-bordered">
+                                  <thead>
+                                  <tr>
+                                      <th>#</th>
+                                      <th>T. DOC</th>
+                                      <th>NRO DOC</th>
+                                      <th>NOMBRES</th>
+                                      <th class="text-center">ELIMINAR</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                      <td>mdo</td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5 class="card-title">NÚMEROS TELEFÓNICOS</h5>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="tnumte">TIPO:</label>
+                            <select type="select" id="tnumte" name="tnumte" class="custom-select form-control-sm">
+                              <option value="">-- Seleccionar --</option>
+                              <option>Value 1</option>
+                              <option>Value 2</option>
+                              <option>Value 3</option>
+                              <option>Value 4</option>
+                              <option>Value 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="nrodoc">NÚMERO TELEFÓNICO:</label>
+                          <input name="nrodoc" id="nrodoc" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-12 pt-3">
+                          <button class="btn-icon btn btn-primary btn-block"><i class="pe-7s-headphones btn-icon-wrapper"> </i>AGREGAR TELÉFONO</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="main-card mb-1 card" style="height: 100%;">
+                          <div class="card-body">
+                              <table class="mb-0 table table-bordered">
+                                  <thead>
+                                  <tr>
+                                      <th>TIPO</th>
+                                      <th class="text-center">TELÉFONO</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr>
+                                      <td>DNI</td>
+                                      <td>TELEFONO</td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5 class="card-title">CORREO(S) ELECTRÓNICO(S)</h5>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label for="correo">CORREO:</label>
+                          <input name="correo" id="correo" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-12 pt-3">
+                          <button class="btn-icon btn btn-primary btn-block"><i class="pe-7s-mail-open-file btn-icon-wrapper"> </i>AGREGAR CORREO ELECTRÓNICO</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="main-card mb-1 card" style="height: 100%;">
+                          <div class="card-body">
+                              <table class="mb-0 table table-bordered">
+                                  <thead>
+                                  <tr>
+                                      <th>CORREO</th>
+                                      <th>DOMINIO</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr>
+                                      <td>Otto</td>
+                                      <td>mdo</td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5 class="card-title">REDES SOCIALES</h5>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="redsoc">RED SOCIAL:</label>
+                            <select type="select" id="redsoc" name="redsoc" class="custom-select form-control-sm">
+                              <option value="">-- Seleccionar --</option>
+                              <option>Value 1</option>
+                              <option>Value 2</option>
+                              <option>Value 3</option>
+                              <option>Value 4</option>
+                              <option>Value 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="linurl">URL:</label>
+                          <input name="linurl" id="linurl" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-12 pt-3">
+                          <button class="btn-icon btn btn-primary btn-block"><i class="pe-7s-network btn-icon-wrapper"> </i>AGREGAR RED SOCIAL</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="main-card mb-1 card" style="height: 100%;">
+                          <div class="card-body">
+                              <table class="mb-0 table table-bordered">
+                                  <thead>
+                                  <tr>
+                                      <th class="text-center">RED SOCIAL</th>
+                                      <th>URL</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr>
+                                      <td>Otto</td>
+                                      <td>mdo</td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row pt-4">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-2">
+                  <button class="btn-icon btn btn-success btn-block"><i class="pe-7s-download btn-icon-wrapper"> </i>GUARDAR DATOS</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-wrapper-footer">
+      <div class="app-footer">
+          <div class="app-footer__inner">
+          </div>
+      </div>
+  </div>
+</div>

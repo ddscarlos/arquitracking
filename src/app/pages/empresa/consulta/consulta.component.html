@@ -78,14 +78,29 @@
 
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Título del Modal</h4>
+    <h6 class="modal-title" id="modal-basic-title">REGISTRO DE EMPRESA</h6>
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
   </div>
   <div class="modal-body">
-    Este es el contenido del modal.
+    <form class="">
+      <div class="form-row">
+         <div class="col-md-6">
+            <div class="position-relative form-group">
+              <label for="p_ruc" class="">RUC</label>
+              <input name="p_ruc" id="p_ruc" placeholder="Ingrese RUC . . ." type="number" class="mb-2 form-control-sm form-control">
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="position-relative form-group">
+              <label for="p_razonsocial" class="">RAZÓN SOCIAL</label>
+              <input name="p_razonsocial" id="p_razonsocial" placeholder="Ingrese Razón Social . . ." type="text" class="mb-2 form-control-sm form-control">
+            </div>
+         </div>
+      </div>
+   </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cerrar</button>
-    <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Guardar Cambios</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Registrar</button>
   </div>
 </ng-template>
