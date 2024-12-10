@@ -1,0 +1,113 @@
+.app-page-title {
+  margin: -45px -30px 15px;
+}
+
+.card-body {
+  padding: 0.5rem 1.25rem;
+}
+
+#razonsocial{
+  width: 80vh;
+}
+
+.modal-backdrop {
+  position: fixed !important;
+  z-index: 1040 !important;
+}
+
+.modal {
+  position: fixed !important;
+  z-index: 1050 !important;
+  display: block !important;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0.5rem 1rem;
+}
+
+.widget-chart .widget-numbers {
+  margin: 0rem auto;
+}
+
+.widget-chart {
+  padding: 0rem;
+}
+
+.colbtniniciar{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttoniniciar {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.custom-select {
+  height: calc(1.9rem + 2px);
+}
+.chartclass{
+  height: 158px;
+}
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0rem 0rem;
+}
+
+@media (max-width: 1200px) {
+  #razonsocial{
+    width: 80vh;
+  }
+}
+@media (max-width: 1024px) {
+  #razonsocial{
+    width: 80vh;
+  }
+}
+@media (max-width: 768px) {
+  #razonsocial{
+    width: 100%;
+  }
+  #searchform{
+    padding-bottom: 20px;
+  }
+  .btnnuevoconsulta{
+    width: 48%;
+  }
+  .btnbuscarconsulta{
+    width: 48%;
+  }
+  .fieldrazsoc{
+    width: 100%;
+  }
+  .app-page-title {
+      margin: -15px -30px 15px;
+  }
+}
+@media (max-width: 480px) {
+  #razonsocial{
+    width: 100%;
+  }
+  #searchform{
+    padding-bottom: 20px;
+  }
+  .btnnuevoconsulta{
+    width: 48%;
+  }
+  .btnnuevoconsulta{
+    width: 48%;
+  }
+  .fieldrazsoc{
+    width: 100%;
+  }
+  .app-page-title {
+      margin: -15px -30px 15px;
+  }
+}
