@@ -1,1 +1,87 @@
-<p>estados works!</p>
+<div class="app-main__outer">
+  <div class="app-main__inner">
+      <div class="app-page-title">
+          <div class="page-title-wrapper">
+              <div class="page-title-heading">
+                  <div class="page-title-icon">
+                      <i class="{{icono}} {{coloricono}}">
+                      </i>
+                  </div>
+                  <div>{{titulo}}
+                      <div class="page-title-subheading">{{descripcion}}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="main-card mb-1 card">
+          <div class="card-body">
+              <table class="mb-0 table">
+                  <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mdo</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>fat</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>twitter</td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+  <div class="app-wrapper-footer">
+      <div class="app-footer">
+          <div class="app-footer__inner">
+          </div>
+      </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">REGISTRO DE EMPRESA</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
+  </div>
+  <div class="modal-body">
+    <form class="">
+      <div class="form-row">
+         <div class="col-md-6">
+            <div class="position-relative form-group">
+              <label for="p_ruc" class="">RUC</label>
+              <input name="p_ruc" id="p_ruc" placeholder="Ingrese RUC . . ." type="number" class="mb-2 form-control-sm form-control">
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="position-relative form-group">
+              <label for="p_razonsocial" class="">RAZÓN SOCIAL</label>
+              <input name="p_razonsocial" id="p_razonsocial" placeholder="Ingrese Razón Social . . ." type="text" class="mb-2 form-control-sm form-control">
+            </div>
+         </div>
+      </div>
+   </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cerrar</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Registrar</button>
+  </div>
+</ng-template>
