@@ -1,1 +1,110 @@
-<p>calendario works!</p>
+<div class="app-main__outer">
+  <div class="app-main__inner">
+
+      <div class="main-card mb-1 card">
+          <div class="card-body" id="searchform">
+              <div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <!-- Texto a la izquierda -->
+                  <span class="h4 mb-0">Calendario</span>
+
+                  <!-- Botón a la derecha (responsivo y ancho dinámico) -->
+                  <button class="btn btn-success" style="min-width: 300px; max-width: 30%;" (click)="open(content)">
+                    <i class="pe-7s-plus"></i> Agregar
+                  </button>
+                </div>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="main-card mb-1 card">
+          calendario
+      </div>
+  </div>
+  <div class="app-wrapper-footer">
+      <div class="app-footer">
+          <div class="app-footer__inner">
+          </div>
+      </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="modal-basic-title">Registrar - Editar Evento</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="fechaInicio" class="form-label">Fecha Inicio</label>
+          <div class="d-flex">
+            <input id="fechaInicio" type="date" class="form-control me-2">
+            <input id="horaInicio" type="time" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="fechaFin" class="form-label">Fecha Fin</label>
+          <div class="d-flex">
+            <input id="fechaFin" type="date" class="form-control me-2">
+            <input id="horaFin" type="time" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="estado" class="form-label">Estado</label>
+          <select id="estado" class="form-select">
+            <option value="registrado">REGISTRADO</option>
+            <option value="pendiente">PENDIENTE</option>
+            <option value="completado">COMPLETADO</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="presupuesto" class="form-label">Presupuesto</label>
+          <input id="presupuesto" type="number" class="form-control" placeholder="0.00">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="participantes" class="form-label">Participantes</label>
+        <select id="participantes" class="form-select">
+          <option value="">Seleccionar Participantes</option>
+          <option value="1">Participante 1</option>
+          <option value="2">Participante 2</option>
+          <option value="3">Participante 3</option>
+          <!-- Agrega más opciones estáticas según lo necesites -->
+        </select>
+        <!-- <select id="participantes" class="form-select">
+          <option value="">Seleccionar Participantes</option>
+          <option *ngFor="let participante of participantes" [value]="participante.id">
+            {{ participante.nombre }}
+          </option>
+        </select> -->
+      </div>
+      <div class="mb-3">
+        <label for="nombreActividad" class="form-label">Nombre Actividad</label>
+        <input id="nombreActividad" type="text" class="form-control" placeholder="Ingrese el nombre de la actividad">
+      </div>
+      <div class="mb-3">
+        <label for="lugar" class="form-label">Lugar</label>
+        <input id="lugar" type="text" class="form-control" placeholder="Ingrese el lugar">
+      </div>
+      <div class="mb-3">
+        <label for="resumen" class="form-label">Resumen (Guardar formato HTML)</label>
+        <textarea id="resumen" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="requerimientos" class="form-label">Requerimientos - Recursos (Guardar formato HTML)</label>
+        <textarea id="requerimientos" class="form-control" rows="3"></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cerrar')">Cancelar</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Grabar</button>
+  </div>
+</ng-template>
+

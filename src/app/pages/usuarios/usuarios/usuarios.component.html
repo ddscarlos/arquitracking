@@ -1,1 +1,147 @@
-<p>usuarios works!</p>
+<div class="app-main__outer">
+  <div class="app-main__inner">
+    <!-- Sección de Búsqueda -->
+    <div class="main-card mb-1 card">
+      <div class="card-body" id="searchform">
+        <div>
+          <div class="d-flex justify-content-around align-items-center mb-4">
+            <!-- Título a la izquierda -->
+            <span class="h4 mb-0">Usuario:</span>
+
+            <!-- Contenedor del Input -->
+            <div class="flex-grow-1 mx-3">
+              <input
+                name="nombrePerfil"
+                id="nombrePerfil"
+                type="text"
+                class="form-control"
+                placeholder="Ingrese el nombre del perfil">
+            </div>
+
+            <!-- Contenedor de los botones con Flexbox -->
+            <div class="d-flex">
+              <button type="button" class="btn btn-primary me-2 flex-fill">
+                <i class="pe-7s-search"></i> Buscar
+              </button>
+              <button type="button" class="btn btn-success flex-fill" (click)="open(content)">
+                <i class="pe-7s-plus"></i> Nuevo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla de Usuario -->
+    <div class="main-card mb-1 card">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="mb-0 table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">Usuario</th>
+                <th class="text-center">Perfil</th>
+                <th class="text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="text-center">1</th>
+                <td class="text-center">Carlos Curo</td>
+                <td class="text-center">Ventas</td>
+                <td class="text-end">
+                  <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown"
+                    class="mb-2 mr-2 dropdown-toggle btn btn-primary btn-sm">
+                    Acciones
+                  </button>
+                  <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+                    <button type="button" tabindex="0" class="dropdown-item">Activar</button>
+                    <button type="button" tabindex="0" class="dropdown-item">Desactivar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-center">2</th>
+                <td class="text-center">María López</td>
+                <td class="text-center">Administración</td>
+                <td class="text-end">
+                  <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown"
+                    class="mb-2 mr-2 dropdown-toggle btn btn-primary btn-sm">
+                    Acciones
+                  </button>
+                  <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+                    <button type="button" tabindex="0" class="dropdown-item">Activar</button>
+                    <button type="button" tabindex="0" class="dropdown-item">Desactivar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-center">3</th>
+                <td class="text-center">Juan Pérez</td>
+                <td class="text-center">Invitado</td>
+                <td class="text-end">
+                  <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown"
+                    class="mb-2 mr-2 dropdown-toggle btn btn-primary btn-sm">
+                    Acciones
+                  </button>
+                  <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+                    <button type="button" tabindex="0" class="dropdown-item">Activar</button>
+                    <button type="button" tabindex="0" class="dropdown-item">Desactivar</button>
+                  </div>
+                </td>
+              </tr>
+              <!-- Agrega más filas según tus necesidades -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <div class="app-wrapper-footer">
+      <div class="app-footer">
+        <div class="app-footer__inner">
+          <!-- Contenido del pie de página (si es necesario) -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Registrar Nuevo Usuario -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">Registrar Usuario</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <!-- Campo de Nombre de Usuario -->
+      <div class="form-group mb-3">
+        <label for="nombreUsuarioModal" class="form-label">Nombre de Usuario</label>
+        <input
+          id="nombreUsuarioModal"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese el nombre del Usuario">
+      </div>
+
+      <!-- Campo de Selección de Perfil (Dropdown) -->
+      <div class="form-group mb-3">
+        <label for="perfilUsuarioModal" class="form-label">Perfil</label>
+        <select id="perfilUsuarioModal" class="form-control">
+          <option value="" disabled selected>Seleccione un perfil</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Usuario">Usuario</option>
+          <option value="Invitado">Invitado</option>
+          <!-- Agrega más opciones de perfil según tus necesidades -->
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cerrar')">Cancelar</button>
+    <button type="button" class="btn btn-primary">Registrar</button>
+  </div>
+</ng-template>
