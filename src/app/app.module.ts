@@ -9,9 +9,10 @@ import { appRoutes } from './app.routes';  // Importa las rutas definidas en app
 import { MenuComponent } from './components/menu/menu.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Chart } from 'chart.js';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,11 +24,14 @@ import { Chart } from 'chart.js';
     NavbarComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     NgbModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

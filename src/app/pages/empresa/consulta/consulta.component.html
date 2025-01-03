@@ -87,13 +87,13 @@
          <div class="col-md-6">
             <div class="position-relative form-group">
               <label for="p_ruc" class="">RUC</label>
-              <input name="p_ruc" id="p_ruc" placeholder="Ingrese RUC . . ." type="number" class="mb-2 form-control-sm form-control">
+              <input class="form-control"  formControlName="p_tdi_numero" [(ngModel)]="p_tdi_numero" name="p_ruc" id="p_ruc" placeholder="Ingrese RUC . . ." type="number" class="mb-2 form-control-sm form-control">
             </div>
          </div>
          <div class="col-md-6">
             <div class="position-relative form-group">
               <label for="p_razonsocial" class="">RAZÓN SOCIAL</label>
-              <input name="p_razonsocial" id="p_razonsocial" placeholder="Ingrese Razón Social . . ." type="text" class="mb-2 form-control-sm form-control">
+              <input class="form-control"  formControlName="p_per_nombre"  name="p_razonsocial" id="p_razonsocial" placeholder="Ingrese Razón Social . . ." type="text" class="mb-2 form-control-sm form-control">
             </div>
          </div>
       </div>
@@ -101,6 +101,6 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cerrar</button>
-    <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Registrar</button>
+    <button type="button" class="btn btn-primary" (click)="guardarEmpresa()">Registrar</button>
   </div>
 </ng-template>
