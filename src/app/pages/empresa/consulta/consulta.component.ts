@@ -20,18 +20,18 @@ export class ConsultaComponent implements OnInit {
   titulo:string='Consulta Empresa';
   descripcion:string='Registro inicial de las empresas a contactar';
 
-  constructor(private appComponent: AppComponent 
+  constructor(private appComponent: AppComponent
     , private modalService: NgbModal
     , private arquitrackingService: arquitrackingService
     , private router: Router
     , private fb: FormBuilder
-  
+
   ) {
     this.appComponent.login = false;
   }
+
   ngOnInit(): void {
     this.setForm();
-
   }
 
   open(content: any) {
@@ -44,6 +44,7 @@ export class ConsultaComponent implements OnInit {
       }
     );
   }
+
   setForm() {
     this.form = this.fb.group({
       p_tdi_numero: ['', [Validators.required]],  // RUC
@@ -52,7 +53,7 @@ export class ConsultaComponent implements OnInit {
   }
 
 
-  // Empresa 
+  // Empresa
   p_tdi_id    : number = 2;
   p_tdi_numero: number = 0;
   p_per_apepat: string = '';
