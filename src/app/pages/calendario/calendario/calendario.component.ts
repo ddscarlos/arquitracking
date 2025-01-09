@@ -13,7 +13,7 @@ export class CalendarioComponent {
     
 
     constructor(private appComponent: AppComponent , private modalService: NgbModal) {
-      this.appComponent.login = false;
+
     }
 
 

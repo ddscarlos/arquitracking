@@ -10,7 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AccesosComponent {
   constructor(private appComponent: AppComponent , private modalService: NgbModal) {
-    this.appComponent.login = false;
+   
   }
 
 

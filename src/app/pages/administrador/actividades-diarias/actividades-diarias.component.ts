@@ -30,7 +30,7 @@ export class ActividadesDiariasComponent implements AfterViewInit {
   descripcion:string='Sección para poder editar y dar mantenimiento a las empresas registradas.';
 
   constructor(private appComponent: AppComponent , private modalService: NgbModal) {
-    this.appComponent.login = false;
+
   }
 
   open(content: any) {

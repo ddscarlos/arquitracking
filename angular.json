@@ -3,9 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "arquitracking": {
+    "arquitraking": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,12 +23,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/arquitracking",
+            "outputPath": "dist/arquitraking",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js",
-              "@angular/localize/init"
+              "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -33,9 +42,10 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/main.css"
             ],
-            "scripts": [
+           "scripts": [
               "src/assets/scripts/main.js"
             ]
+
           },
           "configurations": {
             "production": {
@@ -65,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "arquitracking:build:production"
+              "buildTarget": "arquitraking:build:production"
             },
             "development": {
-              "buildTarget": "arquitracking:build:development"
+              "buildTarget": "arquitraking:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,8 +108,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

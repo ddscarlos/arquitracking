@@ -4,10 +4,10 @@ import { AppComponent } from '../../app.component';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrl: './menu.component.css',
 })
 export class MenuComponent {
   constructor(private appComponent: AppComponent) {
-    this.appComponent.login = false;
+    
   }
 }

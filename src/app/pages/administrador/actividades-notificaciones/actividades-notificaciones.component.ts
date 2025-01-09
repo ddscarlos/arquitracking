@@ -16,7 +16,7 @@ export class ActividadesNotificacionesComponent {
   descripcion:string='Notificaciones de Seguimiento para los usuarios.';
 
   constructor(private appComponent: AppComponent , private modalService: NgbModal) {
-    this.appComponent.login = false;
+    
   }
 
   open(content: any) {

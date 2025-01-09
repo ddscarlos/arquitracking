@@ -9,6 +9,6 @@ import { AppComponent } from '../../../app.component';
 })
 export class PanelComponent {
   constructor(private appComponent: AppComponent) {
-    this.appComponent.login = false;
+    
   }
 }

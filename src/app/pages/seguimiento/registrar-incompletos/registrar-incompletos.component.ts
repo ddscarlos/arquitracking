@@ -16,7 +16,7 @@ export class RegistrarIncompletosComponent {
   descripcion:string='Modificación y registro de las empresas con datos incompletos';
 
   constructor(private appComponent: AppComponent , private modalService: NgbModal) {
-    this.appComponent.login = false;
+ 
   }
 
 

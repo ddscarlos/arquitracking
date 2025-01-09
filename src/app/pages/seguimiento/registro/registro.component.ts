@@ -14,8 +14,8 @@ export class RegistroComponent {
   titulo:string='Mantenimiento de Empresa';
   descripcion:string='Sección para poder editar y dar mantenimiento a las empresas registradas.';
 
-  constructor(private appComponent: AppComponent , private modalService: NgbModal) {
-    this.appComponent.login = false;
+  constructor( private modalService: NgbModal) {
+  
   }
 
   open(content: any) {

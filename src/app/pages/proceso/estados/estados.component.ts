@@ -15,7 +15,7 @@ export class EstadosComponent {
   descripcion:string='Estados de procesos a conocer';
 
   constructor(private appComponent: AppComponent , private modalService: NgbModal) {
-    this.appComponent.login = false;
+   
   }
 
 

@@ -9,6 +9,6 @@ import { AppComponent } from '../../../app.component';
 })
 export class HistorialComponent {
   constructor(private appComponent: AppComponent) {
-    this.appComponent.login = false;
+ 
   }
 }

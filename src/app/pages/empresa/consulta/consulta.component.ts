@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
   templateUrl: './consulta.component.html',
   styleUrl: './consulta.component.css'
 })
-export class ConsultaComponent implements OnInit {
+export default class ConsultaComponent implements OnInit {
   form!: FormGroup;
   icono:string='lnr-picture';
   coloricono:string='text-primary';
@@ -27,7 +27,6 @@ export class ConsultaComponent implements OnInit {
     , private fb: FormBuilder
 
   ) {
-    this.appComponent.login = false;
   }
 
   ngOnInit(): void {
