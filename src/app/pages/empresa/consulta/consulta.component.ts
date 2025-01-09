@@ -60,39 +60,52 @@ export default class ConsultaComponent implements OnInit {
   p_per_nombre: string = '';
   p_pai_id    : number = 179;
   p_tpe_id    : number = 2;
-
   guardarEmpresa() {
+    const formValues = this.form.value;
+  
+    // Imprimir los valores del formulario en la consola
+    console.log('Datos del formulario:', formValues);
+  
     let dataPost = {
-      p_tdi_id    : this.p_tdi_id,
-      p_tdi_numero: this.p_tdi_numero,
+      p_tdi_id: this.p_tdi_id,
+      p_tdi_numero: formValues.p_tdi_numero,
       p_per_apepat: this.p_per_apepat,
       p_per_apemat: this.p_per_apemat,
-      p_per_nombre: this.p_per_nombre,
-      p_pai_id    : this.p_pai_id,
-      p_tpe_id    : this.p_tpe_id
+      p_per_nombre: formValues.p_per_nombre,
+      p_pai_id: this.p_pai_id,
+      p_tpe_id: this.p_tpe_id
     };
-
-
-      Swal.fire({
-        title: '<b>Confirmación</b>',
-        text: "¿Estás seguro de guardar la información?",
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Guardar',
-        cancelButtonText: 'Cancelar'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          this.arquitrackingService.guardarEmpresa(dataPost).subscribe({
-            next: (data: any) => {
-              let result = data[0];
+  
+    // Luego realiza la llamada a la API
+    Swal.fire({
+      title: '<b>Confirmación</b>',
+      text: "¿Estás seguro de guardar la información?",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Guardar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.arquitrackingService.guardarEmpresa(dataPost).subscribe({
+          next: (response: any) => {
+            console.log('Respuesta de la API:', response);
+  
+            // Verificar que la respuesta contiene datos en el campo "data" y que "data" tiene elementos
+            if (response && response.success && Array.isArray(response.data) && response.data.length > 0) {
+              let result = response.data[0];
+  
               if (result.hasOwnProperty('error')) {
                 if (result.error === 0) {
-                  Swal.fire({ title: '<h2>Confirmación</h2>', text: result.mensa, icon: 'success', confirmButtonText: 'Cerrar', confirmButtonColor: "#3085d6" }).then((result) => {
-                    if (result.isConfirmed) {
-                      this.router.navigate(['empresa/consulta-empresa']);
-                    }
+                  Swal.fire({ 
+                    title: '<h2>Confirmación</h2>', 
+                    text: result.mensa, 
+                    icon: 'success', 
+                    confirmButtonText: 'Cerrar', 
+                    confirmButtonColor: "#3085d6" 
+                  }).then(() => {
+                    
                   });
                 } else {
                   Swal.fire(result.mensa, 'Verifique los datos', 'error');
@@ -100,14 +113,19 @@ export default class ConsultaComponent implements OnInit {
               } else {
                 Swal.fire('Ocurrió un error', 'Vuelva a intentarlo', 'error');
               }
-            },
-            error: (error: any) => {
-              console.error(error);
+            } else {
+              Swal.fire('Error', 'La respuesta de la API es inválida o está vacía', 'error');
             }
-          });
-        }
-      });
-    }
+          },
+          error: (error: any) => {
+            console.error(error);
+          }
+        });
+      }
+    });
+  }
+
+  
 }
 
 

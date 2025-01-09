@@ -12,6 +12,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import ConsultaComponent from './pages/empresa/consulta/consulta.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FooterComponent,
     NavbarComponent,
     MenuComponent,
+    ConsultaComponent,
   ],
   imports: [
     BrowserModule,
