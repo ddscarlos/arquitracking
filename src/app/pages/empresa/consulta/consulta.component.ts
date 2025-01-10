@@ -53,13 +53,18 @@ export default class ConsultaComponent implements OnInit {
 
 
   // Empresa
+  p_per_id    : number = 0;
   p_tdi_id    : number = 2;
   p_tdi_numero: number = 0;
   p_per_apepat: string = '';
   p_per_apemat: string = '';
   p_per_nombre: string = '';
+  p_per_numdoi: number = 0;
   p_pai_id    : number = 179;
   p_tpe_id    : number = 2;
+  dataempresatabla :any;
+
+//
   guardarEmpresa() {
     const formValues = this.form.value;
   
@@ -125,7 +130,29 @@ export default class ConsultaComponent implements OnInit {
     });
   }
 
-  
+  ListarTablaEmpresas() {
+    let data_post = {
+        p_per_id: this.p_per_id,
+        p_tdi_id: this.p_tdi_id,
+        p_per_numdoi: this.p_per_numdoi,
+        p_per_nombre: this.p_per_nombre
+    };
+
+    this.arquitrackingService.Listartablaempresa(data_post).subscribe({
+        next: (data: any) => {
+            // Asegúrate de que la respuesta contiene datos válidos
+            if (data && Array.isArray(data)) {
+                this.dataempresatabla = data;
+            } else {
+                Swal.fire('Error', 'No se encontraron resultados', 'info');
+            }
+        },
+        error: (error: any) => {
+            console.error(error);
+            Swal.fire('Error', 'Hubo un problema al obtener los datos', 'error');
+        }
+    });
 }
+  }
 
 

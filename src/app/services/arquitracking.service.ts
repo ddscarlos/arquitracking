@@ -18,4 +18,13 @@ export class arquitrackingService {
         })
       );
   }
+  Listartablaempresa(data: any) {
+    return this.httpClientUtils.postQuery('/empresa/listar', data).pipe(
+        map(data => {
+            return data;
+        })
+    );
+  }
+
+
 }
