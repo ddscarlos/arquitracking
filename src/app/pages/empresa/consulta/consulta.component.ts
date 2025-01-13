@@ -147,6 +147,7 @@ export default class ConsultaComponent implements OnInit {
                 Swal.fire('Error', 'No se encontraron resultados', 'info');
             }
         },
+        
         error: (error: any) => {
             console.error(error);
             Swal.fire('Error', 'Hubo un problema al obtener los datos', 'error');

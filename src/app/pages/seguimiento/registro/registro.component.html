@@ -56,26 +56,18 @@
                     <div class="col-md-4">
                       <div class="form-group">
                           <label for="depart">DEPARTAMENTO</label>
-                          <select type="select" id="depart" name="depart" class="custom-select form-control-sm">
+                          <select type="select" id="depart" name="depart" class="custom-select form-control-sm" (change)="provinciasel($event)">
                             <option value="">-- Seleccionar --</option>
-                            <option>Value 1</option>
-                            <option>Value 2</option>
-                            <option>Value 3</option>
-                            <option>Value 4</option>
-                            <option>Value 5</option>
+                            <option *ngFor="let itemDepartamento of itemsDepartamentos" [value]="itemDepartamento.ude_id">{{ itemDepartamento.ude_descri }}</option>
                           </select>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-group">
                           <label for="depart">PROVINCIA</label>
-                          <select type="select" id="depart" name="depart" class="custom-select form-control-sm">
+                          <select type="select" id="depart" name="depart" class="custom-select form-control-sm" (change)="distritosel($event)">
                             <option value="">-- Seleccionar --</option>
-                            <option>Value 1</option>
-                            <option>Value 2</option>
-                            <option>Value 3</option>
-                            <option>Value 4</option>
-                            <option>Value 5</option>
+                            <option *ngFor="let itemProvincia of itemsProvincias" [value]="itemProvincia.upr_id">{{itemProvincia.upr_descri}}</option>
                         </select>
                       </div>
                     </div>
@@ -84,11 +76,7 @@
                           <label for="depart">DISTRITO</label>
                           <select type="select" id="depart" name="depart" class="custom-select form-control-sm">
                             <option value="">-- Seleccionar --</option>
-                            <option>Value 1</option>
-                            <option>Value 2</option>
-                            <option>Value 3</option>
-                            <option>Value 4</option>
-                            <option>Value 5</option>
+                            <option *ngFor="let itemDistrito of itemsDistritos" [value]="itemDistrito.upr_id">{{itemDistrito.upr_descri}}</option>
                         </select>
                       </div>
                     </div>

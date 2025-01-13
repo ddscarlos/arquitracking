@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import ConsultaComponent from './pages/empresa/consulta/consulta.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -28,14 +29,12 @@ import ConsultaComponent from './pages/empresa/consulta/consulta.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-
-
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
