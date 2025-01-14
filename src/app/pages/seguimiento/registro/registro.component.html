@@ -94,11 +94,7 @@
                             <label for="tdodoc">TIPO DOCUMENTO:</label>
                             <select type="select" id="tdodoc" name="tdodoc" class="custom-select form-control-sm">
                               <option value="">-- Seleccionar --</option>
-                              <option>Value 1</option>
-                              <option>Value 2</option>
-                              <option>Value 3</option>
-                              <option>Value 4</option>
-                              <option>Value 5</option>
+                              <option *ngFor="let itemTipoDocumento of itemsTipoDocumentos" [value]="itemTipoDocumento.tdi_id">{{itemTipoDocumento.tdi_abrevi}}</option>
                             </select>
                           </div>
                         </div>
@@ -162,11 +158,7 @@
                             <label for="tnumte">TIPO:</label>
                             <select type="select" id="tnumte" name="tnumte" class="custom-select form-control-sm">
                               <option value="">-- Seleccionar --</option>
-                              <option>Value 1</option>
-                              <option>Value 2</option>
-                              <option>Value 3</option>
-                              <option>Value 4</option>
-                              <option>Value 5</option>
+                              <option  *ngFor="let itemTipoDocumento of itemsTipoTelefonos" [value]="itemTipoDocumento.tti_id">{{itemTipoDocumento.tti_descri}}</option>
                             </select>
                           </div>
                         </div>
@@ -251,11 +243,8 @@
                             <label for="redsoc">RED SOCIAL:</label>
                             <select type="select" id="redsoc" name="redsoc" class="custom-select form-control-sm">
                               <option value="">-- Seleccionar --</option>
-                              <option>Value 1</option>
-                              <option>Value 2</option>
-                              <option>Value 3</option>
-                              <option>Value 4</option>
-                              <option>Value 5</option>
+                              <option  *ngFor="let itemRedSocial of itemsRedSocial" [value]="itemRedSocial.tti_id">{{itemRedSocial.rso_descri}}</option>
+                              
                             </select>
                           </div>
                         </div>

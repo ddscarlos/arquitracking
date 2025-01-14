@@ -37,6 +37,37 @@ export class arquitrackingService {
       })
     );
   }
+
+  tipodedocumentosel(data: any){
+    return this.httpClientUtils
+    .postQuery('/general/tipo-documento/listar',data)
+    .pipe(
+      map((data)=>{
+        return data;
+      })
+    );
+  }
+
+  tipotelefono(data:any){
+    return this.httpClientUtils
+    .postQuery('/general/telefono-tipo/listar',data)
+    .pipe(
+      map((data)=>{
+        return data;
+      })
+    );
+  }
+
+  tiporedsocial(data:any){
+    return this.httpClientUtils
+    .postQuery('/general/red-social/listar',data)
+    .pipe(
+      map((data)=>{
+        return data;
+      })
+    );
+  }
+
   //FIN ENDPOINTS GENERALES
   guardarEmpresa(data: any) {
     return this.httpClientUtils

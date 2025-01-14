@@ -22,6 +22,9 @@ export class RegistroComponent {
   itemsDepartamentos:any;
   itemsProvincias:any;
   itemsDistritos:any;
+  itemsTipoDocumentos:any;
+  itemsTipoTelefonos:any;
+  itemsRedSocial:any;
 
   constructor( private modalService: NgbModal
     ,private arquitrackingService: arquitrackingService
@@ -31,6 +34,9 @@ export class RegistroComponent {
 
   ngOnInit(): void {
     this.departamentossel();
+    this.tipodedocumentosel();
+    this.tipotelefono();
+    this.tiporedsocial();
   }
 
   open(content: any) {
@@ -96,7 +102,53 @@ export class RegistroComponent {
       }
     })
   }
-  
 
+  tipodedocumentosel(){
+    let dataPost = { 
+      p_tdi_id : 0
+    };
+    
+    this.arquitrackingService.tipodedocumentosel(dataPost).subscribe({
+      next: (response: any) => {
+        console.log(response);
+        this.itemsTipoDocumentos = response.data;
+      },
+      error: (error: any) => {
+        console.error(error);
+      }
+    })
+  }
+  
+  tipotelefono(){
+    let dataPost ={
+      p_tti_id:0
+    };
+    this.arquitrackingService.tipotelefono(dataPost).subscribe({
+      next: (response: any) =>{
+        console.log(response);
+        this.itemsTipoTelefonos = response.data;
+      },
+      error: (error:any) => {
+        console.error(error);
+      }
+    })
+  }
+
+  tiporedsocial(){
+    let dataPost = {
+      p_rso_id: 0,
+      p_rso_activo:0
+    };
+    this.arquitrackingService.tiporedsocial(dataPost).subscribe({
+      next:(response:any) =>{
+        console.log(response)
+        this.itemsRedSocial = response.data;
+      },
+
+      error:(response:any) =>{
+        console.log(response);
+      }
+    })
+  }
 
 }
