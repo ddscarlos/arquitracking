@@ -26,7 +26,7 @@ export class RegistroComponent {
   constructor( private modalService: NgbModal
     ,private arquitrackingService: arquitrackingService
   ) {
-  
+
   }
 
   ngOnInit(): void {
@@ -45,7 +45,7 @@ export class RegistroComponent {
   }
 
   departamentossel(){
-    let dataPost = { 
+    let dataPost = {
       p_ude_id : 0
     };
 
@@ -80,12 +80,12 @@ export class RegistroComponent {
   distritosel(e:any){
     let idpro: number;
     idpro = e.target.value;
-    
-    let dataPost = { 
-      p_upr_id : idpro,
-      p_udi_id : 0
+
+    let dataPost = {
+      p_udi_id : 0,
+      p_upr_id : Number(idpro)
     };
-    
+
     this.arquitrackingService.distritosel(dataPost).subscribe({
       next: (response: any) => {
         console.log(response);
@@ -96,7 +96,7 @@ export class RegistroComponent {
       }
     })
   }
-  
+
 
 
 }

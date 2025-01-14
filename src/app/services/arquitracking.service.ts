@@ -30,7 +30,7 @@ export class arquitrackingService {
 
   distritosel(data: any){
     return this.httpClientUtils
-    .postQuery('/ubigeo/provincia/listar',data)
+    .postQuery('/ubigeo/distrito/listar',data)
     .pipe(
       map((data)=>{
         return data;
