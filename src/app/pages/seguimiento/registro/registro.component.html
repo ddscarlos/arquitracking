@@ -76,7 +76,7 @@
                           <label for="depart">DISTRITO</label>
                           <select type="select" id="depart" name="depart" class="custom-select form-control-sm">
                             <option value="">-- Seleccionar --</option>
-                            <option *ngFor="let itemDistrito of itemsDistritos" [value]="itemDistrito.udi_id">{{itemDistrito.udi_descri}}</option>
+                            <option *ngFor="let itemDistrito of itemsDistritos" [value]="itemDistrito.upr_id">{{itemDistrito.upr_descri}}</option>
                         </select>
                       </div>
                     </div>
@@ -107,11 +107,11 @@
                           <input name="nombres" id="nombres" type="text" class="form-control-sm form-control">
                         </div>
                         <div class="col-md-6">
-                          <label for="apepat">APELLIDO PATERNO:</label>
+                          <label for="apepat">AP.PATERNO:</label>
                           <input name="apepat" id="apepat" type="text" class="form-control-sm form-control">
                         </div>
                         <div class="col-md-6">
-                          <label for="apemat">APELLIDO MATERNO:</label>
+                          <label for="apemat">AP.MATERNO:</label>
                           <input name="apemat" id="apemat" type="text" class="form-control-sm form-control">
                         </div>
                         <div class="col-md-12 pt-3">

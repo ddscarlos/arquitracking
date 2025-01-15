@@ -27,7 +27,7 @@
                           <input name="razonsocial" id="razonsocial" type="text" class="form-control">
                       </div>
                       <button class="btn btn-primary btnbuscarconsulta" style="top: 6px;"><i class="pe-7s-search"> </i> Buscar</button>
-                      <button class="btn btn-success btnnuevoconsulta" style="top: 6px;" (click)="open(content)"><i class="pe-7s-plus"> </i> Nuevo</button>
+                      <button class="btn btn-success btnnuevoconsulta" style="top: 6px;" (click)="open(content,'lg')"><i class="pe-7s-plus"> </i> Nuevo</button>
                   </div>
               </div>
           </div>
@@ -54,10 +54,10 @@
                       <td>
                         <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" class="mb-2 mr-2 dropdown-toggle btn btn-primary btn-sm">Small</button>
                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR REPRESENTANTE(S) LEGAL(ES)</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR NUMEROS TELEFÓNICOS</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR CORREOS ELECTRÓNICOS</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR REDES SOCIALES</button>
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiRep,'xl')">EDITAR REPRESENTANTE(S) LEGAL(ES)</button>
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiNumTel,'xl')">EDITAR NUMEROS TELEFÓNICOS</button>
+                            <!--<button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiCorEle,'xl')">EDITAR CORREOS ELECTRÓNICOS</button>-->
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiNumSoc,'xl')">EDITAR REDES SOCIALES</button> 
                         </div>
                       </td>
                   </tr>
@@ -69,10 +69,10 @@
                       <td>
                         <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" class="mb-2 mr-2 dropdown-toggle btn btn-primary btn-sm">Small</button>
                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR REPRESENTANTE(S) LEGAL(ES)</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR NUMEROS TELEFÓNICOS</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR CORREOS ELECTRÓNICOS</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR REDES SOCIALES</button>
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiRep,'xl')">EDITAR REPRESENTANTE(S) LEGAL(ES)</button>
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiNumTel,'xl')">EDITAR NUMEROS TELEFÓNICOS</button>
+                            <!--<button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiCorEle,'xl')">EDITAR CORREOS ELECTRÓNICOS</button>-->
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiNumSoc,'xl')">EDITAR REDES SOCIALES</button> 
                         </div>
                       </td>
                   </tr>
@@ -84,10 +84,10 @@
                       <td>
                         <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" class="mb-2 mr-2 dropdown-toggle btn btn-primary btn-sm">Small</button>
                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR REPRESENTANTE(S) LEGAL(ES)</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR NUMEROS TELEFÓNICOS</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR CORREOS ELECTRÓNICOS</button>
-                            <button type="button" tabindex="0" class="dropdown-item">EDITAR REDES SOCIALES</button>
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiRep,'xl')">EDITAR REPRESENTANTE(S) LEGAL(ES)</button>
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiNumTel,'xl')">EDITAR NUMEROS TELEFÓNICOS</button>
+                            <!--<button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiCorEle,'xl')">EDITAR CORREOS ELECTRÓNICOS</button>-->
+                            <button type="button" tabindex="0" class="dropdown-item"  (click)="open(contentEdiNumSoc,'xl')">EDITAR REDES SOCIALES</button> 
                         </div>
                       </td>
                   </tr>
@@ -131,4 +131,224 @@
     <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cerrar</button>
     <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Registrar</button>
   </div>
+</ng-template>
+
+<ng-template #contentEdiRep let-modal>
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">REGISTRO DE EMPRESA</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
+  </div>
+  <div class="modal-body">
+    <form class="">
+      <div class="row">
+        <div class="col-12">
+            <div class="row pt-2 pb-2">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5 class="card-title">REPRESENTANTE(S) LEGAL(ES)</h5>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="tdodoc">TIPO DOCUMENTO:</label>
+                            <select type="select" id="tdodoc" name="tdodoc" class="custom-select form-control-sm">
+                              <option value="">-- Seleccionar --</option>
+                              <option *ngFor="let itemTipoDocumento of itemsTipoDocumentos" [value]="itemTipoDocumento.tdi_id">{{itemTipoDocumento.tdi_abrevi}}</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="nrodoc">NÚMERO DE DOCUMENTO:</label>
+                          <input name="nrodoc" id="nrodoc" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-12 pb-3">
+                          <label for="nombres">NOMBRES:</label>
+                          <input name="nombres" id="nombres" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="apepat">APELLIDO PATERNO:</label>
+                          <input name="apepat" id="apepat" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="apemat">APELLIDO MATERNO:</label>
+                          <input name="apemat" id="apemat" type="text" class="form-control-sm form-control">
+                        </div>
+                        <div class="col-md-12 pt-3">
+                          <button class="btn-icon btn btn-primary btn-block"><i class="pe-7s-users btn-icon-wrapper"> </i>AGREGAR REPRESENTANTE</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="main-card mb-1 card" style="height: 100%;">
+                          <div class="card-body">
+                              <table class="mb-0 table table-bordered">
+                                  <thead>
+                                  <tr>
+                                      <th>#</th>
+                                      <th>T. DOC</th>
+                                      <th>NRO DOC</th>
+                                      <th>NOMBRES</th>
+                                      <th class="text-center">ELIMINAR</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                      <td>mdo</td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cerrar</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Registrar</button>
+  </div>
+</ng-template>
+
+
+
+
+<ng-template #contentEdiNumTel let-modal>
+    <div class="modal-header">
+      <h6 class="modal-title" id="modal-basic-title">NÚMEROS TELEFÓNICOS</h6>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
+    </div>
+    <div class="modal-body">
+      <form class="">
+        <div class="row">
+          <div class="col-12">
+              <div class="row pt-2 pb-2">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-2">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h5 class="card-title">REPRESENTANTE(S) LEGAL(ES)</h5>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="tdodoc">TIPO DOCUMENTO:</label>
+                              <select type="select" id="tdodoc" name="tdodoc" class="custom-select form-control-sm">
+                                <option value="">-- Seleccionar --</option>
+                                <option  *ngFor="let itemTipoDocumento of itemsTipoTelefonos" [value]="itemTipoDocumento.tti_id">{{itemTipoDocumento.tti_descri}}</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="nrodoc">NÚMERO TELEFÓNICO:</label>
+                            <input name="nrodoc" id="nrodoc" type="text" class="form-control-sm form-control">
+                          </div>
+                          <div class="col-md-12 pt-3">
+                            <button class="btn-icon btn btn-primary btn-block"><i class="pe-7s-headphones btn-icon-wrapper"> </i>AGREGAR TELÉFONO</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="main-card mb-1 card" style="height: 100%;">
+                            <div class="card-body">
+                                <table class="mb-0 table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>TIPO</th>
+                                        <th class="text-center">TELÉFONO</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>DNI</td>
+                                        <td>TELEFONO</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cerrar</button>
+      <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Registrar</button>
+    </div>
+</ng-template>
+
+
+
+<ng-template #contentEdiNumSoc let-modal>
+    <div class="modal-header">
+      <h6 class="modal-title" id="modal-basic-title">REDES SOCIALES</h6>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
+    </div>
+    <div class="modal-body">
+      <form class="">
+        <div class="row">
+          <div class="col-12">
+              <div class="row pt-2 pb-2">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-2">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h5 class="card-title">REPRESENTANTE(S) LEGAL(ES)</h5>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="tdodoc">RED SOCIAL:</label>
+                              <select type="select" id="redsoc" name="redsoc" class="custom-select form-control-sm">
+                                <option value="">-- Seleccionar --</option>
+                                <option  *ngFor="let itemRedSocial of itemsRedSocial" [value]="itemRedSocial.tti_id">{{itemRedSocial.rso_descri}}</option>
+                               </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="nrodoc">URL:</label>
+                            <input name="nrodoc" id="nrodoc" type="text" class="form-control-sm form-control">
+                          </div>
+                          <div class="col-md-12 pt-3">
+                            <button class="btn-icon btn btn-primary btn-block"><i class="pe-7s-headphones btn-icon-wrapper"> </i>AGREGAR RED SOCIAL</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="main-card mb-1 card" style="height: 100%;">
+                            <div class="card-body">
+                                <table class="mb-0 table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>URL</th>
+                                        <th class="text-center">RED SOCIAL</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Otto</td>
+                                        <td>mdo</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cerrar</button>
+      <button type="button" class="btn btn-primary" (click)="modal.close('Guardar')">Registrar</button>
+    </div>
 </ng-template>

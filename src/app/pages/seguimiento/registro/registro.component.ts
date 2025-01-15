@@ -102,10 +102,6 @@ export class RegistroComponent {
       }
     })
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> eebe490fc46a10c9232981bec9d02b4fba84b6f9
 
   tipodedocumentosel(){
     let dataPost = { 
